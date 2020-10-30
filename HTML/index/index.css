@@ -1,0 +1,128 @@
+/*#################
+###    Reset
+###################*/
+html,body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+/*#################
+###    Header
+###################*/
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:100;
+
+    padding: 10px 20px;
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.781);
+}
+.header__left{
+    width: 50px;
+    height: 50px;
+}
+.header__mid ul{
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__mid ul li{
+    list-style: none;
+    margin: 0 10px;
+}
+.header__right img{
+    height:30px;
+    width: 30px;
+    border-radius: 50%;
+}
+.header__right span{
+    font-size: 13px;
+    color: rgb(145, 144, 144);
+}
+.header__menu-repos{
+    display: none;
+}
+.header__menu-repos i{
+    font-size: 25px;
+    color: rgb(145, 144, 144);
+}
+.header__menu-repos:active+.header__menu-repos_c{
+    width: 200px;
+}
+.header__menu-repos_c:hover{
+    width: 200px;
+}
+.header__menu-repos_c{
+    width: 0;
+
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: rgba(145, 144, 144, 0.473);
+    height: 100%;
+
+    transition: all 0.5s;
+}
+@media screen and (max-width: 576px) {
+    .header__mid,.header__right{
+        display: none;
+    }
+    .header__menu-repos{
+        display: block;
+    }
+  }
+
+/*#################
+###    Carousel
+###################*/
+.tix-carousel{
+    padding: 80px 0 0 0;
+}
+.tix-carousel .carousel-indicators li{
+    border-radius: 50%;
+    height:10px;
+    width: 10px;
+}
+
+.tix-carousel .carousel-indicators{
+    bottom: 50px;
+}
+
+/*######################
+###    Tix-Form-Search
+#########################*/
+.tix-form-search div{
+    background-color: white;
+    transform: translateY(-70%);
+    width: 500px;
+    margin: auto;
+
+    /* border: 1px solid rgb(136, 136, 136); */
+    box-shadow: 1px 5px 5px grey;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+.tix-form-search div select{
+    border: 0;
+    color:rgb(145, 144, 144);
+    padding: 10px 10px;
+}
+.tix-form-search div select:focus{
+    border: 0;
+    outline: 0;
+}
+.tix-form-search div select option{
+    color:black;
+}
