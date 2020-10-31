@@ -7,7 +7,9 @@ html,body{
     padding: 0;
     border: 0;
 }
-
+.clear{
+    clear:both;
+}
 
 /*#################
 ###    Header
@@ -84,6 +86,7 @@ header{
     }
   }
 
+
 /*#################
 ###    Carousel
 ###################*/
@@ -95,10 +98,15 @@ header{
     height:10px;
     width: 10px;
 }
-
 .tix-carousel .carousel-indicators{
     bottom: 50px;
 }
+@media screen and (max-width: 576px) {
+    .tix-carousel .carousel-indicators{
+        bottom: 0;
+    }
+  }
+
 
 /*######################
 ###    Tix-Form-Search
@@ -125,4 +133,75 @@ header{
 }
 .tix-form-search div select option{
     color:black;
+}
+@media screen and (max-width: 576px) {   
+    .tix-form-search{
+        display: none;
+    }
+}
+
+
+/*######################
+###    tix-movie-list
+#########################*/
+.tix-movie-list>div{
+    margin: auto;
+    width: 960px;
+
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:10px;
+}
+.tix-movie-card img{
+    width: 200px;
+    height: 300px;
+}
+.tix-movie-card button{
+    width: 200px;
+}
+.tix-movie-card h6{
+    width: 200px;
+    overflow: hidden;
+}
+@media screen and (max-width: 960px){
+    .tix-movie-list>div{
+        width: 768px;
+        gap:5px;
+    }
+    .tix-movie-card img{
+        width: 190px;
+        height: 260px;
+    }
+    .tix-movie-card button{
+        width: 190px;
+    }
+    .tix-movie-card h6{
+        width: 190px;
+        overflow: hidden;
+    }
+}
+@media screen and (max-width: 768px){
+    .tix-movie-list>div{
+        width: 576px;
+        gap:1px;
+    }
+    .tix-movie-card img{
+        width: 150px;
+        height: 250px;
+    }
+    .tix-movie-card button{
+        width: 150px;
+    }
+    .tix-movie-card h6{
+        width: 150px;
+        overflow: hidden;
+    }
+}
+@media screen and (max-width: 576px) {   
+    .tix-form-search{
+        display: none;
+    }
+    .tix-movie-list{
+        display: none;
+    }
 }
